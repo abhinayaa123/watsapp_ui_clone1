@@ -17,7 +17,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Colors.white,
+    return Scaffold(backgroundColor: Colors.black,
       bottomNavigationBar: BottomNavigationBar(currentIndex: index,onTap: (value) {
         setState(() {
           index = value;

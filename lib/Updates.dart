@@ -6,7 +6,7 @@ class Updates extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: Text(
           "Updates",
@@ -31,7 +31,7 @@ class Updates extends StatelessWidget {
       body: ListView(
         children: [
           SizedBox(height: 20),
-          Text("Status", style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold)),
+          Text("Status", style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white)),
           SizedBox(height: 20),
           ListTile(
             leading: CircleAvatar(
@@ -47,10 +47,10 @@ class Updates extends StatelessWidget {
                 ],
               ),
             ),
-            title: Text("Add status",style:TextStyle(fontWeight: FontWeight.bold)),
-            subtitle: Text("Disappear after 24 hours"),
+            title: Text("Add status",style:TextStyle(fontWeight: FontWeight.bold,color: Colors.white)),
+            subtitle: Text("Disappear after 24 hours",style: TextStyle(color: Colors.white),),
           ),
-          Text("Recent updates"),
+          Text("Recent updates",style: TextStyle(color: Colors.white),),
           SizedBox(height: 20),
           ListTile(
             leading: CircleAvatar(
@@ -61,8 +61,8 @@ class Updates extends StatelessWidget {
                 ),
               ),
             ),
-            title: Text("User1",style:TextStyle(fontWeight: FontWeight.bold)),
-            subtitle: Text("Yesterday"),
+            title: Text("User1",style:TextStyle(fontWeight: FontWeight.bold,color: Colors.white)),
+            subtitle: Text("Yesterday",style: TextStyle(color: Colors.white),),
           ),
         ],
       ),
