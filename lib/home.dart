@@ -18,34 +18,13 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: Colors.white,
-      appBar: AppBar(
-        title: Text(
-          "Watsapp",
-          style: TextStyle(color: Colors.white, fontSize: 20),
-        ),
-        backgroundColor: Colors.black,
-
-        centerTitle: false,
-        actions: [
-          Icon(Icons.qr_code_scanner, color: Colors.white),
-          SizedBox(width: 20),
-          Icon(Icons.camera_alt_outlined, color: Colors.white),
-          SizedBox(width: 20),
-          Icon(Icons.more_vert, color: Colors.white),
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.add_box, color: Colors.black),
-        backgroundColor: Colors.green,
-      ),
       bottomNavigationBar: BottomNavigationBar(currentIndex: index,onTap: (value) {
         setState(() {
           index = value;
         });
       },
 
-      selectedItemColor: Colors.white,unselectedItemColor: Colors.grey,showUnselectedLabels: true ,
+      selectedItemColor: Colors.white,unselectedItemColor: Colors.white,showUnselectedLabels: true ,
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.chat),
               label: "Chat",
@@ -57,7 +36,7 @@ class _HomeState extends State<Home> {
           BottomNavigationBarItem(
               icon: Icon(Icons.call_outlined), label: "Call")
         ],
-      ),
+      ),body: pages[index],
     );
   }
 }
